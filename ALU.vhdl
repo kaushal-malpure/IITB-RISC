@@ -6,7 +6,7 @@ entity Alu is
     port (
 	 
 	 
-        IR : in std_logic_vector(15 downto 0);  -- Operation select: 00 for addition, 01 for subtraction
+        IR : in std_logic_vector(15 downto 0);   -- Operation select: 0001 for addition, 0010 for subtraction
         REGA : in std_logic_vector(15 downto 0);
         REGB : in std_logic_vector(15 downto 0);
         OUTPUT : out std_logic_vector(15 downto 0);

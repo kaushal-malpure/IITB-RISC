@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity Register_File is
     port (
         clk : in std_logic;
+		  reset : in std_logic;
         reg_write_enable : in std_logic;
         write_address : in std_logic_vector(2 downto 0);
         write_data : in std_logic_vector(15 downto 0);
