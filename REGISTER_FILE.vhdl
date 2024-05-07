@@ -21,14 +21,14 @@ end Register_File;
 architecture Behavioral of Register_File is
     type reg_array is array (0 to 7) of std_logic_vector(15 downto 0);
     signal registers : reg_array := (
-        "00000000", -- registers(0)
-        "00000001", -- registers(1)
-        "00000010", -- registers(2)
-        "00000011", -- registers(3)
-        "00000100", -- registers(4)
-        "00000101", -- registers(5)
-        "00000110", -- registers(6)
-        "00000111"  -- registers(7)
+        "0000000000000000", -- registers(0)
+        "0000000000000001", -- registers(1)
+        "0000000000000010", -- registers(2)
+        "0000000000000011", -- registers(3)
+        "0000000000000100", -- registers(4)
+        "0000000000000101", -- registers(5)
+        "0000000000000110", -- registers(6)
+        "0000000000000111"  -- registers(7)
     );
 
 begin
@@ -38,14 +38,14 @@ begin
         if reset = '1' then
             -- Assign initial values to temp_registers during reset
             temp_registers := (
-                "00000000", -- registers(0)
-                "00000001", -- registers(1)
-                "00000010", -- registers(2)
-                "00000011", -- registers(3)
-                "00000100", -- registers(4)
-                "00000101", -- registers(5)
-                "00000110", -- registers(6)
-                "00000111"  -- registers(7)
+                "0000000000000000", -- registers(0)
+                "0000000000000001", -- registers(1)
+                "0000000000000010", -- registers(2)
+                "0000000000000011", -- registers(3)
+                "0000000000000100", -- registers(4)
+                "0000000000000101", -- registers(5)
+                "0000000000000110", -- registers(6)
+                "0000000000000111"  -- registers(7)
             );
         elsif rising_edge(clk) then
             if write_address = "000" and reg_write_enable = '1' then
