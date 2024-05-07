@@ -20,21 +20,44 @@ end Register_File;
 
 architecture Behavioral of Register_File is
     type reg_array is array (0 to 7) of std_logic_vector(15 downto 0);
-    signal registers : reg_array := (others => (others => '0')); -- Initialize registers with 0s
+    signal registers : reg_array := (
+        "00000000", -- registers(0)
+        "00000001", -- registers(1)
+        "00000010", -- registers(2)
+        "00000011", -- registers(3)
+        "00000100", -- registers(4)
+        "00000101", -- registers(5)
+        "00000110", -- registers(6)
+        "00000111"  -- registers(7)
+    );
+
 begin
     process (clk)
+        variable temp_registers : reg_array; -- Declare a variable to hold temporary values
     begin
-        if rising_edge(clk) then
+        if reset = '1' then
+            -- Assign initial values to temp_registers during reset
+            temp_registers := (
+                "00000000", -- registers(0)
+                "00000001", -- registers(1)
+                "00000010", -- registers(2)
+                "00000011", -- registers(3)
+                "00000100", -- registers(4)
+                "00000101", -- registers(5)
+                "00000110", -- registers(6)
+                "00000111"  -- registers(7)
+            );
+        elsif rising_edge(clk) then
             if write_address = "000" and reg_write_enable = '1' then
-						registers(to_integer(unsigned(write_address))) <= write_data;
+                registers(to_integer(unsigned(write_address))) <= write_data;
             else
-				     registers(0) <= write_pc;  
-			    end if ;			
-				
+                registers(0) <= write_pc;  
+            end if;
         end if;
-    end process;	
+    end process;
+    
     data_out1 <= registers(to_integer(unsigned(read_address1)));
     data_out2 <= registers(to_integer(unsigned(read_address2)));
-	 read_pc   <= registers(0);
-	 
+    read_pc   <= registers(0);
+     
 end Behavioral;

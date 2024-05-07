@@ -56,6 +56,10 @@ set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE pipeline_5.vhdl
+set_global_assignment -name VHDL_FILE pipeline_4.vhdl
+set_global_assignment -name VHDL_FILE pipeline_3.vhdl
+set_global_assignment -name VHDL_FILE pipeline_2.vhdl
 set_global_assignment -name VHDL_FILE pipeline_1.vhdl
 set_global_assignment -name VHDL_FILE TEMP_REG.vhdl
 set_global_assignment -name VHDL_FILE REGISTER_FILE.vhdl
