@@ -1,5 +1,9 @@
 Flow report for EE_309_PROJECT
+<<<<<<< HEAD
 Tue May 07 20:35:12 2024
+=======
+Wed May 08 04:24:06 2024
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +44,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                        ; Flow Failed - Tue May 07 20:35:12 2024      ;
+=======
+; Flow Status                        ; Flow Failed - Wed May 08 04:24:06 2024      ;
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; EE_309_PROJECT                              ;
 ; Top-level Entity Name              ; pipeline_1                                  ;
@@ -66,12 +74,17 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 05/07/2024 20:35:02 ;
+=======
+; Start date & time ; 05/08/2024 04:23:54 ;
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EE_309_PROJECT      ;
 +-------------------+---------------------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                             ;
 +-------------------------------------+----------------------------------------+----------------+-------------+----------------+
@@ -93,6 +106,29 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; pipeline_1                             ; EE_309_PROJECT ; --          ; --             ;
 +-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+=======
++----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                 ;
++-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name     ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 1095681738674.171512243324232          ; --             ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --             ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>         ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --              ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --              ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%          ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; INSTRUCTION_REG                        ; EE_309_PROJECT ; --              ; --             ;
++-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -100,8 +136,13 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4781 MB             ; 00:00:08                           ;
 ; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:08                           ;
+=======
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4780 MB             ; 00:00:04                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:04                           ;
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,7 +151,7 @@ refer to the applicable agreement for further details.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Pravesh          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-HODD13S  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 

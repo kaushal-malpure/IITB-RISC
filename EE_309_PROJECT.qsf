@@ -53,6 +53,12 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+<<<<<<< HEAD
+=======
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 set_global_assignment -name VHDL_FILE pipeline_5.vhdl
 set_global_assignment -name VHDL_FILE pipeline_4.vhdl
 set_global_assignment -name VHDL_FILE pipeline_3.vhdl
@@ -64,7 +70,16 @@ set_global_assignment -name VHDL_FILE MEMORY.vhdl
 set_global_assignment -name VHDL_FILE LEFTSHIFTER.vhdl
 set_global_assignment -name VHDL_FILE ALU.vhdl
 set_global_assignment -name VHDL_FILE IITB_RISC.vhd
+<<<<<<< HEAD
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+=======
+set_global_assignment -name VHDL_FILE tryALU.vhd
+set_global_assignment -name VHDL_FILE padder_1plus16.vhd
+set_global_assignment -name VHDL_FILE padder_15plus1.vhd
+set_global_assignment -name VHDL_FILE padder_16plus1.vhd
+set_global_assignment -name VHDL_FILE complementor.vhd
+set_global_assignment -name VHDL_FILE sign_extender_10plus6.vhd
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

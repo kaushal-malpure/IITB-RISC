@@ -1,5 +1,9 @@
 Analysis & Elaboration report for EE_309_PROJECT
+<<<<<<< HEAD
 Tue May 07 20:35:12 2024
+=======
+Wed May 08 04:24:06 2024
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +40,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration Status      ; Failed - Tue May 07 20:35:12 2024           ;
+=======
+; Analysis & Elaboration Status      ; Failed - Wed May 08 04:24:06 2024           ;
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; EE_309_PROJECT                              ;
 ; Top-level Entity Name              ; pipeline_1                                  ;
@@ -60,8 +68,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -163,6 +171,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Tue May 07 20:35:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EE_309_PROJECT -c EE_309_PROJECT --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -179,32 +188,75 @@ Info (12021): Found 2 design units, including 1 entities, in source file pipelin
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_2.vhdl
     Info (12022): Found design unit 1: pipeline_2-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_2.vhdl Line: 13
     Info (12023): Found entity 1: pipeline_2 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_2.vhdl Line: 6
+=======
+    Info: Processing started: Wed May 08 04:23:53 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EE_309_PROJECT -c EE_309_PROJECT --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_5.vhdl
+    Info (12022): Found design unit 1: pipeline_5-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_5.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_5 File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_5.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_4.vhdl
+    Info (12022): Found design unit 1: pipeline_4-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_4.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_4 File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_4.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_3.vhdl
+    Info (12022): Found design unit 1: pipeline_3-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_3.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_3 File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_3.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_2.vhdl
+    Info (12022): Found design unit 1: pipeline_2-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_2.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_2 File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_2.vhdl Line: 6
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_1.vhdl
-    Info (12022): Found design unit 1: pipeline_1-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_1.vhdl Line: 13
-    Info (12023): Found entity 1: pipeline_1 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_1.vhdl Line: 6
+    Info (12022): Found design unit 1: pipeline_1-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_1.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_1 File: C:/Users/Kaushal/Desktop/IITB-RISC/pipeline_1.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file temp_reg.vhdl
-    Info (12022): Found design unit 1: temp_reg-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/TEMP_REG.vhdl Line: 14
-    Info (12023): Found entity 1: temp_reg File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/TEMP_REG.vhdl Line: 6
+    Info (12022): Found design unit 1: temp_reg-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/TEMP_REG.vhdl Line: 13
+    Info (12023): Found entity 1: temp_reg File: C:/Users/Kaushal/Desktop/IITB-RISC/TEMP_REG.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhdl
-    Info (12022): Found design unit 1: Register_File-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/REGISTER_FILE.vhdl Line: 21
-    Info (12023): Found entity 1: Register_File File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/REGISTER_FILE.vhdl Line: 5
+    Info (12022): Found design unit 1: Register_File-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/REGISTER_FILE.vhdl Line: 21
+    Info (12023): Found entity 1: Register_File File: C:/Users/Kaushal/Desktop/IITB-RISC/REGISTER_FILE.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhdl
-    Info (12022): Found design unit 1: Memory-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/MEMORY.vhdl Line: 15
-    Info (12023): Found entity 1: Memory File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/MEMORY.vhdl Line: 5
+    Info (12022): Found design unit 1: Memory-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/MEMORY.vhdl Line: 15
+    Info (12023): Found entity 1: Memory File: C:/Users/Kaushal/Desktop/IITB-RISC/MEMORY.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file leftshifter.vhdl
-    Info (12022): Found design unit 1: LeftShifter-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/LEFTSHIFTER.vhdl Line: 12
-    Info (12023): Found entity 1: LeftShifter File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/LEFTSHIFTER.vhdl Line: 6
+    Info (12022): Found design unit 1: LeftShifter-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/LEFTSHIFTER.vhdl Line: 12
+    Info (12023): Found entity 1: LeftShifter File: C:/Users/Kaushal/Desktop/IITB-RISC/LEFTSHIFTER.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhdl
-    Info (12022): Found design unit 1: Alu-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/ALU.vhdl Line: 18
-    Info (12023): Found entity 1: Alu File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/ALU.vhdl Line: 5
+    Info (12022): Found design unit 1: Alu-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/ALU.vhdl Line: 18
+    Info (12023): Found entity 1: Alu File: C:/Users/Kaushal/Desktop/IITB-RISC/ALU.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file iitb_risc.vhd
-    Info (12022): Found design unit 1: IITB_RISC-beh File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/IITB_RISC.vhd Line: 11
-    Info (12023): Found entity 1: IITB_RISC File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/IITB_RISC.vhd Line: 5
-Error (10482): VHDL error at IITB_RISC.vhd(32): object "fsm" is used but not declared File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/IITB_RISC.vhd Line: 32
+    Info (12022): Found design unit 1: IITB_RISC-beh File: C:/Users/Kaushal/Desktop/IITB-RISC/IITB_RISC.vhd Line: 11
+    Info (12023): Found entity 1: IITB_RISC File: C:/Users/Kaushal/Desktop/IITB-RISC/IITB_RISC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tryalu.vhd
+    Info (12022): Found design unit 1: tryAlu-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/tryALU.vhd Line: 18
+    Info (12023): Found entity 1: tryAlu File: C:/Users/Kaushal/Desktop/IITB-RISC/tryALU.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file padder_1plus16.vhd
+    Info (12022): Found design unit 1: Padder1plus16-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_1plus16.vhd Line: 11
+    Info (12023): Found entity 1: Padder1plus16 File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_1plus16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file padder_15plus1.vhd
+    Info (12022): Found design unit 1: Padder-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_15plus1.vhd Line: 11
+    Info (12023): Found entity 1: Padder File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_15plus1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file padder_16plus1.vhd
+    Info (12022): Found design unit 1: Padder16plus1-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_16plus1.vhd Line: 11
+    Info (12023): Found entity 1: Padder16plus1 File: C:/Users/Kaushal/Desktop/IITB-RISC/padder_16plus1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
+    Info (12022): Found design unit 1: Complementer-Behavioral File: C:/Users/Kaushal/Desktop/IITB-RISC/complementor.vhd Line: 12
+    Info (12023): Found entity 1: Complementer File: C:/Users/Kaushal/Desktop/IITB-RISC/complementor.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sign_extender_10plus6.vhd
+    Info (12022): Found design unit 1: sign_extender_10plus6-SE File: C:/Users/Kaushal/Desktop/IITB-RISC/sign_extender_10plus6.vhd Line: 12
+    Info (12023): Found entity 1: sign_extender_10plus6 File: C:/Users/Kaushal/Desktop/IITB-RISC/sign_extender_10plus6.vhd Line: 5
+Error (10482): VHDL error at IITB_RISC.vhd(32): object "fsm" is used but not declared File: C:/Users/Kaushal/Desktop/IITB-RISC/IITB_RISC.vhd Line: 32
 Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
+<<<<<<< HEAD
     Error: Peak virtual memory: 4781 megabytes
     Error: Processing ended: Tue May 07 20:35:12 2024
     Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:08
+=======
+    Error: Peak virtual memory: 4780 megabytes
+    Error: Processing ended: Wed May 08 04:24:06 2024
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:04
+>>>>>>> f8fa52e2baae01d8f531a46fde8f0e4e14717b39
 
 
