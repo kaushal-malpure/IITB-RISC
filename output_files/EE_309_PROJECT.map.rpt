@@ -1,5 +1,5 @@
 Analysis & Elaboration report for EE_309_PROJECT
-Tue May 07 19:35:57 2024
+Tue May 07 20:35:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,10 +36,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Tue May 07 19:35:57 2024           ;
+; Analysis & Elaboration Status      ; Failed - Tue May 07 20:35:12 2024           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; EE_309_PROJECT                              ;
-; Top-level Entity Name              ; INSTRUCTION_REG                             ;
+; Top-level Entity Name              ; pipeline_1                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M25SAE144C8G     ;                    ;
-; Top-level entity name                                            ; INSTRUCTION_REG    ; EE_309_PROJECT     ;
+; Top-level entity name                                            ; pipeline_1         ; EE_309_PROJECT     ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,10 +163,22 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 07 19:35:47 2024
+    Info: Processing started: Tue May 07 20:35:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EE_309_PROJECT -c EE_309_PROJECT --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_5.vhdl
+    Info (12022): Found design unit 1: pipeline_5-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_5.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_5 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_5.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_4.vhdl
+    Info (12022): Found design unit 1: pipeline_4-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_4.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_4 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_4.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_3.vhdl
+    Info (12022): Found design unit 1: pipeline_3-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_3.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_3 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_3.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_2.vhdl
+    Info (12022): Found design unit 1: pipeline_2-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_2.vhdl Line: 13
+    Info (12023): Found entity 1: pipeline_2 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_2.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_1.vhdl
     Info (12022): Found design unit 1: pipeline_1-Behavioral File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_1.vhdl Line: 13
     Info (12023): Found entity 1: pipeline_1 File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/pipeline_1.vhdl Line: 6
@@ -191,8 +203,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file iitb_ri
 Error (10482): VHDL error at IITB_RISC.vhd(32): object "fsm" is used but not declared File: C:/Users/ASUS/OneDrive/Desktop/IITB-RISC/IITB_RISC.vhd Line: 32
 Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Tue May 07 19:35:57 2024
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:07
+    Error: Processing ended: Tue May 07 20:35:12 2024
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:08
 
 

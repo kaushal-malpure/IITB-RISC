@@ -1,5 +1,5 @@
 Flow report for EE_309_PROJECT
-Tue May 07 19:35:57 2024
+Tue May 07 20:35:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Tue May 07 19:35:57 2024      ;
+; Flow Status                        ; Flow Failed - Tue May 07 20:35:12 2024      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; EE_309_PROJECT                              ;
-; Top-level Entity Name              ; INSTRUCTION_REG                             ;
+; Top-level Entity Name              ; pipeline_1                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M25SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
@@ -66,33 +66,33 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2024 19:35:47 ;
+; Start date & time ; 05/07/2024 20:35:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EE_309_PROJECT      ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                 ;
-+-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name     ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 194052601635247.171509074726392        ; --             ; --              ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --             ; --              ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>         ; --              ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --              ; eda_simulation ;
-; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off            ; --              ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --              ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --              ; --             ;
-; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%          ; --              ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --              ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --              ; --             ;
-; TOP_LEVEL_ENTITY                    ; INSTRUCTION_REG                        ; EE_309_PROJECT ; --              ; --             ;
-+-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 194052601635247.171509430225264        ; --             ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>         ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --          ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; pipeline_1  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; pipeline_1  ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; pipeline_1  ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%          ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; pipeline_1                             ; EE_309_PROJECT ; --          ; --             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -100,8 +100,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4781 MB             ; 00:00:07                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:07                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4781 MB             ; 00:00:08                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:08                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

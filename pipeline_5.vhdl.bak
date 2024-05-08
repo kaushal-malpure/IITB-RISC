@@ -10,7 +10,7 @@ entity pipeline_5 is
 			output: out std_logic_vector(47 downto 0));
 end pipeline_5;
 
-architecture Behavioral of pipeline_5 is
+architecture Behavioral of pipeline_4 is
     signal p5 : std_logic_vector(47 downto 0) := (others => '0');     -- [Regc(47-32),IR(31-16),IP(15-0)]
 begin
     process(clk, reset)

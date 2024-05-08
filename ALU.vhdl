@@ -10,12 +10,22 @@ entity Alu is
         REGA : in std_logic_vector(15 downto 0);
         REGB : in std_logic_vector(15 downto 0);
         OUTPUT : out std_logic_vector(15 downto 0);
+		  
 		  Z : out std_logic;
 		  C : out std_logic
     );
 end Alu;
 
 architecture Behavioral of Alu is
+
+	component  pipeline_4 is
+	port (input:in std_logic_vector(49 downto 0);
+			reset : in std_logic;
+			w_enable, clk: in std_logic;
+			output: out std_logic_vector(49 downto 0));
+end component pipeline_4;
+
+
     signal temp : std_logic_vector(15 downto 0);
     
 begin
