@@ -10,7 +10,7 @@ entity Alu is
         REGA : in std_logic_vector(15 downto 0);
         REGB : in std_logic_vector(15 downto 0);
         OUTPUT : out std_logic_vector(15 downto 0);
-		  
+		  PIPE4 : std_logic_vector(49 downto 0);
 		  Z : out std_logic;
 		  C : out std_logic
     );
@@ -18,18 +18,13 @@ end Alu;
 
 architecture Behavioral of Alu is
 
-	component  pipeline_4 is
-	port (input:in std_logic_vector(49 downto 0);
-			reset : in std_logic;
-			w_enable, clk: in std_logic;
-			output: out std_logic_vector(49 downto 0));
-end component pipeline_4;
 
 
     signal temp : std_logic_vector(15 downto 0);
+	 signal p4 : std_logic_vector(49 downto 0);
     
 begin
-    output_1 : process (IR, REGA, REGB)
+    output_1 : process (IR, REGA, REGB, PIPE4)
         variable temp_result : integer;
 		  variable temp : std_logic_vector(15 downto 0); 
 		  variable temp_rega_ls4, temp_regb_ls4: std_logic_vector(3 downto 0);
@@ -43,22 +38,28 @@ begin
 		
 		
         case IR(15 downto 12)  is
-            when "0000" =>
-                temp_result := to_integer(unsigned(REGA)) + to_integer(unsigned(REGB));
-			   when "0010" =>
-                temp_result := to_integer(unsigned(REGA)) - to_integer(unsigned(REGB));
-            when "0011" =>
-                temp_result := to_integer(unsigned(temp_rega_ls4)) * to_integer(unsigned(temp_regb_ls4)); 
-            when "0100" =>
-                temp := REGA AND REGB;  -- Bitwise AND
-            when "0101" =>
-                temp := REGA OR REGB;  -- Bitwise OR
-            when "0110" =>
-                temp := not(REGA) OR REGB;  -- Logical Implication
-				when "1000" =>
-                temp := IR(7 DOWNTO 0) & "00000000" ;
-				when "1001" =>
-                temp :=  "00000000"  & IR(7 DOWNTO 0) ;	 
+            when "0001" =>      --  add
+						
+					case IR(2 downto 0) is	
+			
+							when "000" =>                 --simple add
+								temp_result := to_integer(unsigned(REGA)) + to_integer(unsigned(REGB));
+							when "010" =>                 -- add if c
+							    if PIPE4(48) 
+								temp_result := to_integer(unsigned(REGA)) + to_integer(unsigned(REGB));
+								 
+							when "0011" =>
+								 temp_result := to_integer(unsigned(temp_rega_ls4)) * to_integer(unsigned(temp_regb_ls4)); 
+							when "0100" =>
+								 temp := REGA AND REGB;  -- Bitwise AND
+							when "0101" =>
+								 temp := REGA OR REGB;  -- Bitwise OR
+							when "0110" =>
+								 temp := not(REGA) OR REGB;  -- Logical Implication
+							when "1000" =>
+								 temp := IR(7 DOWNTO 0) & "00000000" ;
+							when "1001" =>
+								 temp :=  "00000000"  & IR(7 DOWNTO 0) ;	 
 					
 				
 			
