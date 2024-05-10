@@ -1,5 +1,5 @@
 Flow report for EE_309_PROJECT
-Fri May 10 08:49:35 2024
+Fri May 10 14:01:32 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 10 08:49:35 2024       ;
+; Flow Status                        ; Successful - Fri May 10 14:01:32 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; EE_309_PROJECT                              ;
-; Top-level Entity Name              ; REGISTER_FILE                               ;
+; Top-level Entity Name              ; ALU                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M25SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2024 08:49:24 ;
+; Start date & time ; 05/10/2024 14:00:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EE_309_PROJECT      ;
 +-------------------+---------------------+
@@ -77,24 +77,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name     ; Section Id     ;
 +-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 194052601635247.171531116426388        ; --             ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1095681738674.171532984402204          ; --             ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --             ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>         ; --              ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --              ; eda_simulation ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off            ; --              ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --              ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; ALU             ; Top            ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; REGISTER_FILE   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; ALU             ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; REGISTER_FILE   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; ALU             ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; INSTRUCTION_REG ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; REGISTER_FILE   ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --              ; --             ;
 ; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%          ; --              ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --              ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --              ; --             ;
-; TOP_LEVEL_ENTITY                    ; REGISTER_FILE                          ; EE_309_PROJECT ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; ALU                                    ; EE_309_PROJECT ; --              ; --             ;
 +-------------------------------------+----------------------------------------+----------------+-----------------+----------------+
 
 
@@ -103,8 +103,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4789 MB             ; 00:00:08                           ;
-; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Elaboration ; 00:00:51     ; 1.0                     ; 4777 MB             ; 00:00:17                           ;
+; Total                  ; 00:00:51     ; --                      ; --                  ; 00:00:17                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,7 +113,7 @@ refer to the applicable agreement for further details.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Pravesh          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-HODD13S  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri May 10 08:49:35 2024
+Analysis & Elaboration Status : Successful - Fri May 10 14:01:32 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : EE_309_PROJECT
-Top-level Entity Name : REGISTER_FILE
+Top-level Entity Name : ALU
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

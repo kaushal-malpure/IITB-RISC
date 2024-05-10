@@ -7,22 +7,22 @@ entity ALU is
         IR : in std_logic_vector(15 downto 0);  
         REGA : in std_logic_vector(15 downto 0);
         REGB : in std_logic_vector(15 downto 0);	
-		  PIPE4 : in std_logic_vector(49 downto 0);
+		  PIPE4 : in std_logic_vector(81 downto 0);
         OUTPUT : out std_logic_vector(15 downto 0);
         Zout : out std_logic;
         Cout : out std_logic
     );
-end ALU;
+end ALU;	
 
 architecture Behavioral of ALU is
 
     signal temp_int : integer;	
 	 signal temp : std_logic_vector(16 downto 0);
 	 signal comp_regb_16 : std_logic_vector(15 downto 0);
-    signal rega_extended, rega_extended_new, regb_extended, regb_extended_new, tempc_extended, tempz_extended, comp_regb, regc_extended : std_logic_vector(16 downto 0);
+    signal rega_extended, rega_extended_new, regb_extended, regb_extended_new, tempc_extended, tempz_extended, comp_regb, regc_extended, rega_pipe4_extended: std_logic_vector(16 downto 0);
     signal se_imm_padd : std_logic_vector(16 downto 0);
     signal se_imm_padd_16 : std_logic_vector(15 downto 0);
-
+	 
 	 
     component Padder1plus16 is
         port (
@@ -63,19 +63,38 @@ begin
 	 extend6 : padder1plus16 port map(comp_regb_16, comp_regb);
     signExtend1 : sign_extender_10plus6 port map(IR(5 downto 0), se_imm_padd_16);
 	 extend7 : padder1plus16 port map(se_imm_padd_16, se_imm_padd);
+	 extend8 : padder1plus16 port map(pipe4(81 downto 66), rega_pipe4_extended);
+--	 extend9 : padder1plus16 port map(pipe4(65 downto 50), regb_pipe4_extended);
     
-    process (IR, REGA, REGB ,PIPE4, rega_extended, regb_extended, comp_regb, tempc_extended, regc_extended, tempz_extended, se_imm_padd, rega_extended_new, regb_extended_new , temp, temp_int)
+    process (IR, REGA, REGB ,PIPE4, rega_extended, regb_extended, comp_regb, tempc_extended, regc_extended, tempz_extended, se_imm_padd, rega_extended_new, regb_extended_new , temp, temp_int, rega_pipe4_extended)
     begin
 			
 			rega_extended <= rega_extended_new;
 			regb_extended <= regb_extended_new;
 			
-			if to_integer(unsigned(IR(11 downto 9))) - to_integer(unsigned(pipe4(21 downto 19))) = 0 then
-				 rega_extended <= regc_extended;
-			elsif to_integer(unsigned(IR(8 downto 6))) - to_integer(unsigned(pipe4(21 downto 19))) = 0 then
-				 regb_extended <= regc_extended;
+			if pipe4(31 downto 28) = "0001" or pipe4(31 downto 28) = "0010" then
+				if to_integer(unsigned(IR(11 downto 9))) - to_integer(unsigned(pipe4(21 downto 19))) = 0 then
+					 rega_extended <= regc_extended;
+				elsif to_integer(unsigned(IR(8 downto 6))) - to_integer(unsigned(pipe4(21 downto 19))) = 0 then
+					if IR(15 downto 12) /= "0011" then
+						 regb_extended <= regc_extended;						
+					end if;
+				end if;
+			elsif pipe4(31 downto 28) = "0000" then
+				if to_integer(unsigned(IR(11 downto 9))) - to_integer(unsigned(pipe4(27 downto 25))) = 0 then
+					rega_extended <= rega_pipe4_extended;
+				elsif to_integer(unsigned(IR(8 downto 6))) - to_integer(unsigned(pipe4(27 downto 25))) = 0 then
+					regb_extended <= rega_pipe4_extended;
+				end if;
+			elsif pipe4(31 downto 28) = "0011" then
+				if to_integer(unsigned(IR(11 downto 9))) - to_integer(unsigned(pipe4(27 downto 25))) = 0 then
+					rega_extended <= rega_pipe4_extended;
+				elsif to_integer(unsigned(IR(8 downto 6))) - to_integer(unsigned(pipe4(27 downto 25))) = 0 then
+					regb_extended <= rega_pipe4_extended;
+				end if;
 			end if;
 			
+				
 			case IR(15 downto 12) is
 				when "0001" =>   -- 8 cases for add
 					 if IR(2) = '0' then
@@ -164,7 +183,9 @@ begin
 						  Zout <= '0';
 					 end if;
 					 Cout <= temp(16);
-					 OUTPUT <= temp(15 downto 0);   
+					 OUTPUT <= temp(15 downto 0); 
+				
+		    
 --				 
 ----				when "0100"	=> -- output is address in memory, memory pe value hain use rega mein dalna hain
 ----					 temp_int <= to_integer(unsigned(regb_extended)) + to_integer(unsigned(se_imm_padd));
