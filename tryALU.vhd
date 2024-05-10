@@ -1,3 +1,4 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -16,7 +17,7 @@ entity tryAlu is
 end tryAlu;
 
 architecture Behavioral of tryAlu is
-    signal temp : std_logic_vector(15 downto 0);
+    signal temp : std_logic_vector(16 downto 0);
     signal rega_extended, regb_extended, tempc_extended, tempz_extended, comp_regb : std_logic_vector(16 downto 0);
     signal se_imm_padd : std_logic_vector(16 downto 0);
     

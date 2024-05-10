@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M25SAE144C8G
-set_global_assignment -name TOP_LEVEL_ENTITY pipeline_1
+set_global_assignment -name TOP_LEVEL_ENTITY REGISTER_FILE
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:21:05  MAY 07, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -68,6 +68,8 @@ set_global_assignment -name VHDL_FILE MEMORY.vhdl
 set_global_assignment -name VHDL_FILE LEFTSHIFTER.vhdl
 set_global_assignment -name VHDL_FILE ALU.vhdl
 set_global_assignment -name VHDL_FILE IITB_RISC.vhd
+set_global_assignment -name VHDL_FILE DATAPATH.vhd
+set_global_assignment -name VHDL_FILE ALU_2.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
